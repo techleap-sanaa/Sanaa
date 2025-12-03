@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import LandingPage from '@/pages/Landing'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-              
-    </>
+    <div>
+      {/* TODO: Hey guys, all our pages will be rendered here. Currently working on Landing Page.*/}
+      <LandingPage />
+    </div>
   )
 }
 
