@@ -1,4 +1,5 @@
-import LandingLayout from "../components/layout/LandingLayout";
+// import LandingLayout from "../components/layout/LandingLayout";
+import LandingLayout from "@/components/layout/LandingLayout";
 
 function LandingPage() {
   return (
