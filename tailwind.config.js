@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
   	extend: {
+	  keyframes: {
+        inspoMarquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "inspo-marquee": "inspoMarquee 10s linear infinite",
+      },	
       fontFamily: {
         'clash': ['Clash Display', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
