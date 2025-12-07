@@ -7,7 +7,10 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section id="home" className="relative bg-black w-full h-full pt-20 text-white overflow-hidden">
+    <section
+      id="home"
+      className="relative bg-black w-full min-h-screen pt-20 text-white overflow-hidden"
+    >
       <div className="absolute inset-0 pointer-events-none">
         <HeroOrbitCarousel images={heroImages} className="h-full w-full" />
       </div>

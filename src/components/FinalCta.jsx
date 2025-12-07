@@ -4,7 +4,7 @@ function FinalCta() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-screen h-[432px] gap-8 flex flex-col">
+    <div className="relative w-full h-[432px] gap-8 flex flex-col">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('./final-cta-image.jpg')" }}
