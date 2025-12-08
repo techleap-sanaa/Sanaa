@@ -9,9 +9,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-black w-full min-h-screen pt-20 text-white overflow-hidden"
+      className="relative bg-black w-full min-h-screen pt-40 text-white overflow-hidden"
     >
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none z-0">
         <HeroOrbitCarousel images={heroImages} className="h-full w-full" />
       </div>
 
