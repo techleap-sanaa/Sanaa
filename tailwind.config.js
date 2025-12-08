@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         clash: ["Clash Display", "sans-serif"],
         lato: ["Lato", "sans-serif"],
+        adumu: ['Adumu', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
