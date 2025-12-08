@@ -12,8 +12,8 @@ function LandingPage() {
       <AboutSanaaCreate/>
       <FindInspo />
       <SanaaAccordion/>
+      <FindYourNiche />      
       <FinalCta />
-
     </LandingLayout>
   );
 }
