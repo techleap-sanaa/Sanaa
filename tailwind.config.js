@@ -9,24 +9,14 @@ export default {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
         },
-        "slide-left": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" }, // Changed from -100% to -50%
-        },
-        "slide-right": {
-          from: { transform: "translateX(-50%)" },
-          to: { transform: "translateX(0)" }, // Changed from -100% to -50%
-        },
       },
       animation: {
         "inspo-marquee": "inspoMarquee 10s linear infinite",
-        slideLeft: "slide-left 32s linear infinite",
-        slideRight: "slide-right 32s linear infinite",
       },
       fontFamily: {
         clash: ["Clash Display", "sans-serif"],
         lato: ["Lato", "sans-serif"],
-        adumu: ["Adumu", "sans-serif"],
+        adumu: ['Adumu', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
