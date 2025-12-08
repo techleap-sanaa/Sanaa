@@ -53,7 +53,7 @@ function Header() {
         <div className="w-full flex items-center justify-between bg-white rounded-full px-10 py-2">
           <Link
             to="/"
-            className="font-adumu text-3xl uppercase tracking-wide text-black"
+            className="font-adumu text-3xl mt-1.5 uppercase tracking-wide text-black"
           >
             SANAA
           </Link>
