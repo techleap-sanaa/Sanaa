@@ -5,10 +5,10 @@ export default function SignInPage() {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/authImages/signup.png')",
+        backgroundImage: "url('/authImages/login.png')",
       }}
     >
-      <div className="max-w-4xl w-3/5 gap-5 rounded-2xl shadow-md flex p-3 bg-white">
+      <div className="max-w-4xl w-3/5 gap-0 rounded-2xl shadow-md flex p-3 bg-white">
         <div className="w-3/6">
           <SignUp routing="path" path="/sign-up" signInUrl="/sign-in" />
         </div>
@@ -16,12 +16,12 @@ export default function SignInPage() {
         <div
           className="w-3/6 py-36 px-6 rounded-2xl align-middle bg-center bg-cover"
           style={{
-            backgroundImage: "url('/authImages/signup.png')",
+            backgroundImage: "url('/authImages/login.png')",
           }}
         >
           <div className="text-3xl text-white font-bold text-left">
             Let's get started
-          </div>
+          </div> 
           <h2 className="mt-2 text-white font-light text-[18px] text-left">
             Join the vibrant community of artists, performers and creators
           </h2>
