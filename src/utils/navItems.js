@@ -1,4 +1,4 @@
-import { Calendar1Icon, CalendarClock, CalendarRange, HomeIcon, SearchIcon, Users } from "lucide-react";
+import { CalendarClock, HomeIcon, SearchIcon, Users } from "lucide-react";
 
 
 export const navigationItems = [
@@ -10,16 +10,16 @@ export const navigationItems = [
   {
     title: "Discover",
     icon: SearchIcon,
-    href: "/",
+    href: "/feed/discover",
   },
   {
     title: "Following",
     icon: Users,
-    href: "/",
+    href: "/feed/following",
   },
   {
     title: "Events",
     icon: CalendarClock,
-    href: "/",
+    href: "/feed/events",
   },
 ];

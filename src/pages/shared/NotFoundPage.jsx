@@ -15,10 +15,10 @@ function NotFoundPage() {
       </p>
 
       <button
-        onClick={() => navigate("/")}
+        onClick={() => navigate(-1)}
         className="px-6 py-3 bg-red-600 rounded-full font-medium hover:bg-red-500 transition"
       >
-        Back to home
+        Back to Previous Page
       </button>
     </div>
   );

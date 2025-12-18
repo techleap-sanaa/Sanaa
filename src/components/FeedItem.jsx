@@ -14,7 +14,7 @@ export default function FeedItem({ item }) {
   const showMore = desc.length > 150;
 
   return (
-    <Card className="overflow-hidden bg-[#202123] border-none rounded-xl max-w-2xl mx-auto">
+    <Card className="overflow-hidden bg-[#202123] border-none rounded-xl mx-auto">
       {item.media && (
         <div className="w-full aspect-video bg-muted rounded-t-xl overflow-hidden">
           {item.media.type === "video" ? (
@@ -95,13 +95,13 @@ export default function FeedItem({ item }) {
         <div className="justify-center gap-3 flex w-full mb-4">
           <div className="flex justify-center gap-4 w-full">
             <Button
-              className="w-full py-6 sm:flex-initial bg-white text-black hover:text-white"
+              className="w-full py-6 sm:flex-initial bg-white text-black hover:bg-white/50"
             >
               <ShoppingBag className="mr-2 h-4 w-4" />
               Unlock with membership
             </Button>
             <Button
-              className="w-full sm:flex-initial bg-[#18181A]/90 hover:bg-bg-[#18181A]/ text-white py-6"
+              className="w-full sm:flex-initial bg-[#2C2C2C] hover:bg-[#18181A] hover:text-white text-white py-6"
             >
               <Coffee className="mr-2 h-4 w-4" />
               Buy for KES 500
@@ -110,14 +110,14 @@ export default function FeedItem({ item }) {
         </div>
 
         <div className="flex gap-2 w-full">
-          <div className="gap-4 flex group">
-            <Button variant="ghost" size="sm" className="gap-2 border border-white rounded-full hover:rtext-black p-5">
+          <div className="gap-4 flex">
+            <Button size="sm" className="gap-2 border border-white rounded-full hover:bg-[#2C2C2C] hover:text-black p-5">
               <Heart className="h-4 w-4 text-white hover:text-black" />
               <span className="text-white">
               {item.likes || 0}
               </span>
             </Button>
-            <Button variant="ghost" size="sm" className="gap-2 border border-white rounded-full p-5">
+            <Button size="sm" className="gap-2 border border-white rounded-full p-5 hover:bg-[#2C2C2C]">
               <MessageCircle className="h-4 w-4 text-white" />
               <span className="text-white">
                 {item.comments || 0}

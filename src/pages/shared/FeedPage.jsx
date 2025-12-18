@@ -18,21 +18,15 @@ export default function FeedPage() {
 
   return (
     <MainLayout asideContent={<FeedAside />}>
-      <div className="space-y-6 max-w-4xl mx-auto ">
-        {/* <div>
-          <h1 className="text-3xl font-bold tracking-tight">Feed</h1>
-          <p className="text-muted-foreground">
-            Browse and discover new content
-          </p>
-        </div> */}
+      <div className="mt-0 max-w-4xl mx-auto">
 
         {loading ? (
           <div className="text-center py-12 justify-center flex flex-col items-center">
-            <Loader2Icon className="animate-spin size-8" />
-            <p className="text-muted-foreground">Loading...</p>
+            <Loader2Icon className="animate-spin size-8 text-red-800"/>
+            <p className="text-white/70">Just a second...</p>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-4 mt-0">
             {feedData?.map((item) => (
               <FeedItem key={item.id} item={item} />
             ))}
