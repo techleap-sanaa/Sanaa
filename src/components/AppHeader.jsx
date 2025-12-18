@@ -25,10 +25,13 @@ export default function AppHeader() {
     <header className="sticky top-0 z-40 w-full bg-[#18181A] backdrop-blur supports-[backdrop-filter]:bg-[#18181A]/60">
       <div className="flex h-16 items-center gap-4 px-4 md:px-6">        
         <div className="flex items-center ml-auto">
+          {/* Bell icon - will act as notification trigger */}
         <BellIcon className="mr-3 h-6 w-6 text-white hover:text-muted-foreground ease-in-out cursor-pointer"/>
 
+          {/* User dropdown menu */}
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            {/* User avatar and name */}
+            <DropdownMenuTrigger>
               <button className="flex gap-2 items-center hover:opacity-80 transition-opacity focus:outline-none bg-gray-200 py-[5px] px-2 rounded-full">
                 <Avatar className="h-7 w-7">
                   <AvatarImage
@@ -52,46 +55,54 @@ export default function AppHeader() {
                       "User"}
                   </p>
                   <p className="text-xs text-left leading-none text-gray-700">
-                    Fan profile
+                    fan profile
                   </p>
                 </div>
                 <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <DropdownMenuLabel>
-                <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">
-                    {user?.username ||
-                      user?.emailAddresses[0]?.emailAddress?.split("@")[0] ||
-                      "User"}
-                  </p>
-                  <p className="text-xs leading-none text-muted-foreground">
-                    {user?.emailAddresses[0]?.emailAddress}
-                  </p>
-                </div>
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <Link to="/dashboard" className="cursor-pointer">
-                  <User className="mr-2 h-4 w-4" />
-                  <span>Profile</span>
+            <DropdownMenuContent align="end" className="w-80 bg-[#202123] border-none">
+                              
+              <div className="my-5 w-full flex items-center px-6 text-red-600 hover:bg-red-600 py-2 rounded-md hover:text-white cursor-pointer">
+
+                <Link to="/feed" className="cursor-pointer flex items-center gap-1">
+                  <Avatar className="h-7 w-7">
+                  <AvatarImage
+                    src={user?.imageUrl}
+                    alt={
+                      user?.username ||
+                      user?.emailAddresses[0]?.emailAddress ||
+                      "User"
+                    }
+                  />
+                  <AvatarFallback>
+                    {user?.username?.[0]?.toUpperCase() ||
+                      user?.emailAddresses[0]?.emailAddress?.[0]?.toUpperCase() ||
+                      "U"}
+                  </AvatarFallback>
+                </Avatar>
+                  <span className="text-white ml-2 font-lato ">
+                    {user?.username}
+                  </span>
                 </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/settings" className="cursor-pointer">
-                  <Settings className="mr-2 h-4 w-4" />
-                  <span>Settings</span>
+              </div>
+              <DropdownMenuSeparator className="bg-white/20 m-2" />
+              <div className="my-5 w-full flex items-center px-6 text-red-600 hover:bg-red-600 py-2 rounded-md hover:text-white cursor-pointer">
+
+                <Link to="/feed" className="cursor-pointer flex items-center gap-1">
+                  <User className="mr-2 h-6 w-6 text-white" />
+                  <span className="text-white font-lato font-normal ">Profile</span>
                 </Link>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
+              </div>
+              
+              <DropdownMenuSeparator className="bg-white/20 m-2" />
+              <div
                 onClick={handleSignOut}
-                className="cursor-pointer text-red-600 focus:text-red-600"
+                className="cursor-pointer text-red-600 hover:bg-red-600 py-2 rounded-md hover:text-white my-5 w-full flex items-center px-6"
               >
                 <LogOut className="mr-2 h-4 w-4"/>
                 <span>Sign Out</span>
-              </DropdownMenuItem>
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
