@@ -12,8 +12,8 @@ export default function FeedAside() {
 
   return (
     <div className="space-y-6">
-      <div className="space-y-3">
-        <h2 className="text-lg font-semibold">Upcoming Events</h2>
+      <div className="space-y-3 rounded-lg w-full p-4 bg-[#202123] ">
+        <h2 className="text-sm font-normal text-white border-b border-white pb-1">Upcoming Events</h2>
         {mockEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
@@ -27,8 +27,8 @@ export default function FeedAside() {
         </Button>
       </div>
 
-      <div className="space-y-3">
-        <h2 className="text-lg font-semibold">Recommended for you</h2>
+      <div className="space-y-3 rounded-lg w-full p-4 bg-[#202123]">
+        <h2 className="text-sm font-normal text-white border-b border-white pb-1">Recommended for you</h2>
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-base">Creators you might like</CardTitle>

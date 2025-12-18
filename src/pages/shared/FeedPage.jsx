@@ -19,12 +19,12 @@ export default function FeedPage() {
   return (
     <MainLayout asideContent={<FeedAside />}>
       <div className="space-y-6 max-w-4xl mx-auto">
-        <div>
+        {/* <div>
           <h1 className="text-3xl font-bold tracking-tight">Feed</h1>
           <p className="text-muted-foreground">
             Browse and discover new content
           </p>
-        </div>
+        </div> */}
 
         {loading ? (
           <div className="text-center py-12 justify-center flex flex-col items-center">

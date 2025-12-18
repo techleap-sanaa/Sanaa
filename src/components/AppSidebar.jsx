@@ -22,12 +22,12 @@ export default function AppSidebar() {
   const { open } = useSidebar();
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="text-white border-none rounded-lg shadow-lg m-2">
       <SidebarHeader>
-        <div className="flex items-center gap-2 justify-center align-middle px-2 sm:flex-col">
-          <div className="flex items-center justify-center w-full text-blue-950 py-4">
+        <div className="flex items-center align-middle px-2">
+          <div className="flex items-center w-full text-white py-4">
             {open ? (
-              <span className="text-lg font-bold font-adumu">SANAA</span>
+              <span className="text-[32px] font-bold font-adumu">SANAA</span>
             ) : (
               <span className="text-lg font-bold font-adumu m-2">S</span>
             )}

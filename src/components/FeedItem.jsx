@@ -14,7 +14,7 @@ export default function FeedItem({ item }) {
   const showMore = desc.length > 150;
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden bg-[#202123] border-none rounded-xl max-w-2xl mx-auto">
       {item.media && (
         <div className="w-full aspect-video bg-muted rounded-t-xl overflow-hidden">
           {item.media.type === "video" ? (
@@ -34,7 +34,7 @@ export default function FeedItem({ item }) {
             <div className="w-full h-full flex items-center justify-center p-8">
               <div className="text-center space-y-2">
                 <div className="text-4xl">📄</div>
-                <p className="text-sm text-muted-foreground font-medium">
+                <p className="text-sm font-medium">
                   {item.media.alt || "Document"}
                 </p>
                 <Button variant="outline" size="sm" asChild>
@@ -54,35 +54,35 @@ export default function FeedItem({ item }) {
 
       <CardContent className="p-4 md:p-6 space-y-4">
         <div>
-          <p className="text-sm text-red-500 font-semibold mb-2">
+          <p className="text-[16px] text-red-600 font-normal mb-2">
             {item.title}
           </p>
-          <h3 className="text-lg font-semibold">{item.title}</h3>
-          <span className="text-xs text-muted-foreground">
+          <h3 className="text-[18px] font-semibold text-white ">{item.title}</h3>
+          <span className="text-xs text-white/60">
             {dayjs(item.createdAt).fromNow()}
           </span>
         </div>
 
         <div className="flex items-center gap-3 text-sm text-muted-foreground">
-          <Avatar className="h-6 w-6">
+          <Avatar className="h-6 w-6 border border-neutral-800">
             <AvatarImage src={item.user.avatar} alt={item.user.username} />
             <AvatarFallback>
               {item.user.username?.[0]?.toUpperCase() || "U"}
             </AvatarFallback>
           </Avatar>
-          <span className="font-normal text-foreground">
+          <span className="font-normal text-white">
             {item.user.username}
           </span>
         </div>
         {desc && (
           <>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-[16px] text-white">
               {expanded || !showMore ? desc : desc.substring(0, 150) + "..."}
             </p>
             {showMore && (
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="text-sm text-primary hover:underline mt-1"
+                className="text-[14px] text-white/70 hover:underline mt-1 font-bold"
               >
                 {expanded ? "Show less" : "Show more"}
               </button>
@@ -93,18 +93,15 @@ export default function FeedItem({ item }) {
 
       <CardFooter className="p-4 md:p-6 pt-0 flex flex-col ">
         <div className="justify-center gap-3 flex w-full mb-4">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex justify-center gap-4 w-full">
             <Button
-              size="lg"
-              className="py-6 sm:flex-initial bg-black"
+              className="w-full py-6 sm:flex-initial bg-white text-black hover:text-white"
             >
               <ShoppingBag className="mr-2 h-4 w-4" />
               Unlock with membership
             </Button>
             <Button
-              variant="outline"
-              size="lg"
-              className="lg:px-24 sm:px-20 py-6 sm:flex-initial"
+              className="w-full sm:flex-initial bg-[#18181A]/90 hover:bg-bg-[#18181A]/ text-white py-6"
             >
               <Coffee className="mr-2 h-4 w-4" />
               Buy for KES 500
@@ -113,14 +110,18 @@ export default function FeedItem({ item }) {
         </div>
 
         <div className="flex gap-2 w-full">
-          <div className="gap-4 flex">
-            <Button variant="ghost" size="sm" className="gap-2 border border-neutral-950 rounded-full">
-              <Heart className="h-4 w-4" />
+          <div className="gap-4 flex group">
+            <Button variant="ghost" size="sm" className="gap-2 border border-white rounded-full hover:rtext-black p-5">
+              <Heart className="h-4 w-4 text-white hover:text-black" />
+              <span className="text-white">
               {item.likes || 0}
+              </span>
             </Button>
-            <Button variant="ghost" size="sm" className="gap-2 border border-neutral-950 rounded-full">
-              <MessageCircle className="h-4 w-4" />
-              {item.comments || 0}
+            <Button variant="ghost" size="sm" className="gap-2 border border-white rounded-full p-5">
+              <MessageCircle className="h-4 w-4 text-white" />
+              <span className="text-white">
+                {item.comments || 0}
+              </span>
             </Button>
           </div>
         </div>

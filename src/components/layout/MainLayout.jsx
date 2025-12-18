@@ -6,7 +6,7 @@ import AppAside from "../AppAside";
 export default function MainLayout({ children, asideContent }) {
   return (
     <SidebarProvider defaultOpen={true}>
-      <div className="flex min-h-screen w-full">
+      <div className="flex min-h-screen w-full bg-[#18181A]">
         <AppSidebar />
         <div className="flex flex-1 flex-col">
           <AppHeader />
