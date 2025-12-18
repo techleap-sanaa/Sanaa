@@ -3,17 +3,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function EventCard({ event }) {
   return (
-    <Card className="overflow-hidden">
-      <div className="relative h-24 w-full overflow-hidden">
-        <img
-          src={event.banner}
-          alt={event.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <CardContent className="p-3 space-y-2">
+    <Card className=" p-2 overflow-hidden max-h-28 bg-secondary-foreground border-none">
+      <CardContent className=" p-0 space-y-2">
         <div className="flex items-start gap-2">
-          <Avatar className="h-6 w-6 shrink-0">
+          <Avatar className="h-5 w-5 shrink-0">
             <AvatarImage
               src={event.creator.avatar}
               alt={event.creator.username}
@@ -23,17 +16,29 @@ export default function EventCard({ event }) {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
-            <h4 className="text-sm font-semibold leading-tight line-clamp-2">
-              {event.title}
-            </h4>
-            <p className="text-xs text-muted-foreground mt-0.5">
+            <p className=" inline-flex text-xs font-lato font-normal text-primary-foreground mt-0.5 ">
               {event.creator.username}
             </p>
           </div>
         </div>
-        <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-          {event.description}
-        </p>
+        <article className="flex relative h-24 w-full overflow-hidden gap-2">
+          <div className=" h-[3.75rem] w-[3.75rem] ">
+            <img
+              src={event.banner}
+              alt={event.title}
+              className="w-full h-full object-cover rounded-[0.3125rem]"
+            />
+          </div>
+          <div>
+            <h3 className="text-xs text-primary-foreground line-clamp-2 leading-relaxed text-wrap">
+              {event.title}
+            </h3>
+            <p className="text-xs text-primary-foreground line-clamp-2 leading-relaxed text-wrap">
+              <span className=" opacity-60">32nd February</span> <br />
+              <span>Timbuktu</span>
+            </p>
+          </div>
+        </article>
       </CardContent>
     </Card>
   );

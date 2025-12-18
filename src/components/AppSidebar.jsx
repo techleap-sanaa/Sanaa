@@ -47,7 +47,7 @@ export default function AppSidebar() {
           )}
         </div>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="no-scrollbar">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>

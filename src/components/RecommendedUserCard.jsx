@@ -5,9 +5,9 @@ import { UserPlus } from "lucide-react";
 
 export default function RecommendedUserCard({ user, onFollow }) {
   return (
-    <Card>
-      <CardContent className="p-3 space-y-2">
-        <div className="flex items-center gap-2">
+    <Card className=" h-full w-28 bg-secondary-foreground border-none">
+      <CardContent className="p-2 space-y-2 flex flex-col h-full justify-evenly">
+        <div className="items-center gap-2 flex flex-col">
           <Avatar className="h-10 w-10">
             <AvatarImage src={user.avatar} alt={user.username} />
             <AvatarFallback>
@@ -15,7 +15,7 @@ export default function RecommendedUserCard({ user, onFollow }) {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
-            <h4 className="text-sm font-semibold truncate">{user.username}</h4>
+            <h4 className="text-sm font-semibold truncate text-primary-foreground">{user.username}</h4>
             <p className="text-xs text-muted-foreground truncate">
               {user.category}
             </p>
@@ -24,10 +24,10 @@ export default function RecommendedUserCard({ user, onFollow }) {
         <Button
           variant="outline"
           size="sm"
-          className="w-full"
+          className="w-full self-end m-0"
           onClick={() => onFollow?.(user.id)}
         >
-          <UserPlus className="mr-2 h-3 w-3" />
+          <UserPlus className="h-3 w-3 text-destructive" />
           Follow
         </Button>
       </CardContent>
