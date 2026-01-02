@@ -1,54 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    darkMode: ["class"],
+    content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
   	extend: {
-  		keyframes: {
-  			inspoMarquee: {
-  				'0%': {
-  					transform: 'translateX(0%)'
-  				},
-  				'100%': {
-  					transform: 'translateX(-50%)'
-  				}
-  			},
-  			'slide-left': {
-  				from: {
-  					transform: 'translateX(0)'
-  				},
-  				to: {
-  					transform: 'translateX(-50%)'
-  				}
-  			},
-  			'slide-right': {
-  				from: {
-  					transform: 'translateX(-50%)'
-  				},
-  				to: {
-  					transform: 'translateX(0)'
-  				}
-  			}
-  		},
-  		animation: {
-  			'inspo-marquee': 'inspoMarquee 10s linear infinite',
-  			slideLeft: 'slide-left 32s linear infinite',
-  			slideRight: 'slide-right 32s linear infinite'
-  		},
-  		fontFamily: {
-  			clash: [
-  				'Clash Display',
-  				'sans-serif'
-  			],
-  			lato: [
-  				'Lato',
-  				'sans-serif'
-  			],
-  			adumu: [
-  				'Adumu',
-  				'sans-serif'
-  			]
-  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -94,21 +52,10 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			},
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--my-sidebar-color))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--my-sidebar-color))',
-  				'hsl(var(--my-sidebar-color))': 'hsl(var(--my-sidebar-color))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
   			}
   		}
   	}
   },
-  plugins: [
-    // require("tailwindcss-animate")
-  ],
-};
+  plugins: [require("tailwindcss-animate")],
+}
+
