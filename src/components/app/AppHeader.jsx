@@ -43,7 +43,7 @@ export default function AppHeader() {
               <span className="sr-only">Toggle menu</span>
             </button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="bg-[#202123] border-none p-0">
+          <SheetContent side="bottom" className="bg-[#202123] border-none rounded-t-2xl pb-8 pt-14 px-1">
             <div className="flex flex-col space-y-2 p-4">
               {navigationItems.map((item) => {
                 const active = isActive(item.href);
