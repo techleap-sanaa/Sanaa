@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import EventCard from "./EventCard";
-import RecommendedUserCard from "./RecommendedUserCard";
+import RecommendedUserCard from "../landinpage/RecommendedUserCard";
 import { mockEvents, mockRecommendedUsers } from "@/data/mockAsideData";
 import { ChevronRight } from "lucide-react";
 
@@ -13,7 +13,9 @@ export default function FeedAside() {
   return (
     <div className="space-y-6 w-80 ">
       <div className="space-y-3 rounded-lg w-full p-4 bg-[#202123] flex flex-col">
-        <h2 className="text-sm font-normal text-white border-b-[0.5px] border-white border-opacity-60 pb-1">Upcoming Events</h2>
+        <h2 className="text-sm font-normal text-white border-b-[0.5px] border-white border-opacity-60 pb-1">
+          Upcoming Events
+        </h2>
         {mockEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
@@ -28,7 +30,9 @@ export default function FeedAside() {
       </div>
 
       <div className="space-y-3 rounded-lg w-full p-4 bg-[#202123] border-none">
-        <h2 className="text-sm font-normal text-white border-b border-white border-opacity-60 pb-1">Recommended for you</h2>
+        <h2 className="text-sm font-normal text-white border-b border-white border-opacity-60 pb-1">
+          Recommended for you
+        </h2>
         <Card className=" w-full border-none">
           {/* <CardHeader className="pb-3">
             <CardTitle className="text-base">Creators you might like</CardTitle>
