@@ -1,7 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSidebar from "../AppSidebar";
-import AppHeader from "../AppHeader";
-import AppAside from "../AppAside";
+import AppSidebar from "../app/AppSidebar";
+import AppHeader from "../app/AppHeader";
+import AppAside from "../app/AppAside";
 
 export default function MainLayout({ children, asideContent }) {
   return (

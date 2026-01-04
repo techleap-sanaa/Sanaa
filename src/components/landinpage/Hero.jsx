@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeroOrbitCarousel from "./HeroOrbitCarousel";
-import { heroImages } from "./heroImages";
+import { heroImages } from "../../utils/heroImages";
 
 export default function Hero() {
   const navigate = useNavigate();
