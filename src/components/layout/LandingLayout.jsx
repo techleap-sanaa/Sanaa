@@ -1,5 +1,5 @@
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../landinpage/Header";
+import Footer from "../landinpage/Footer";
 
 export default function LandingLayout({ children }) {
   return (

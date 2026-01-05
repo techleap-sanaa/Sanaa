@@ -1,10 +1,10 @@
-import FindInspo from "@/components/FindInspo";
-import Hero from "@/components/Hero";
+import Hero from "@/components/landinpage/Hero";
 import LandingLayout from "@/components/layout/LandingLayout";
-import FinalCta from "@/components/FinalCta";
-import AboutSanaaCreate from "@/components/AboutSanaaCreate";
-import SanaaAccordion from "@/components/Accordion";
-import FindYourNiche from "@/components/FindYourNiche";
+import AboutSanaaCreate from "@/components/landinpage/AboutSanaaCreate";
+import SanaaAccordion from "@/components/landinpage/Accordion";
+import FindInspo from "@/components/landinpage/FindInspo";
+import FinalCta from "@/components/landinpage/FinalCta";
+import FindYourNiche from "@/components/landinpage/FindYourNiche";
 
 function LandingPage() {
   return (

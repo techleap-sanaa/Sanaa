@@ -5,14 +5,14 @@ export default function SignInPage() {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/authImages/login.png')",
+        backgroundImage: "url('/authImages/signup.png')",
       }}
     >
-      <div className="max-w-4xl w-3/5 rounded-2xl shadow-md flex justify-between p-2 gap-3 bg-white">
+      <div className="max-w-4xl w-3/5 rounded-2xl shadow-md flex justify-between p-2 gap- bg-white">
         <div
           className="w-3/6 py-36 px-6 rounded-2xl align-middle bg-center bg-cover"
           style={{
-            backgroundImage: "url('/authImages/login.png')",
+            backgroundImage: "url('/authImages/signup.png')",
           }}
         >
             <div className="text-3xl text-white font-bold text-left">
