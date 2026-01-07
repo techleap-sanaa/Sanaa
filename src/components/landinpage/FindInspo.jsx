@@ -1,5 +1,4 @@
 import { findInspoImages } from "@/utils/findInspoImages";
-import React from "react";
 
 export default function FindInspo() {
   const trackImages = [...findInspoImages, ...findInspoImages];

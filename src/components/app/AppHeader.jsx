@@ -43,7 +43,10 @@ export default function AppHeader() {
               <span className="sr-only">Toggle menu</span>
             </button>
           </SheetTrigger>
-          <SheetContent side="bottom" className="bg-[#202123] border-none rounded-t-2xl pb-8 pt-14 px-1">
+          <SheetContent
+            side="bottom"
+            className="bg-[#202123] border-none rounded-t-2xl pb-8 pt-14 px-1"
+          >
             <div className="flex flex-col space-y-2 p-4">
               {navigationItems.map((item) => {
                 const active = isActive(item.href);
@@ -75,7 +78,7 @@ export default function AppHeader() {
           {/* User dropdown menu */}
           <DropdownMenu>
             {/* User avatar and name */}
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger asChild>
               <button className="flex gap-2 items-center hover:opacity-80 transition-opacity focus:outline-none bg-gray-200 py-[5px] px-2 rounded-full">
                 <Avatar className="h-7 w-7">
                   <AvatarImage

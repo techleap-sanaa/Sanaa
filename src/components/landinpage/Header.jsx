@@ -71,7 +71,7 @@ function Header() {
                   to="/feed"
                   className="bg-red-600 text-white font-bold rounded-full px-5 py-2 text-sm font-lato hover:bg-red-700 transition"
                 >
-                  Your Feed
+                  Go to Feed
                 </Link>
               </>
             ) : (
