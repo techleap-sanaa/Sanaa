@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AboutSanaaCreate() {
   const backgroundText = Array(14).fill("CREATE \u25A0 CONNECT");
 

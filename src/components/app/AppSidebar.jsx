@@ -22,6 +22,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { sidebarMenuButtonClass } from "./SidebarStyles";
+import { settingsItems } from "@/utils/settingsItems";
 
 const items = navigationItems;
 
@@ -110,7 +111,7 @@ export default function AppSidebar() {
             <button
               className={cn(
                 sidebarMenuButtonClass,
-                "w-full justify-center md:justify-start"
+                "w-full justify-center md:justify-start text-white bg-[#1F2937] hover:bg-[#374151] py-2"
               )}
             >
               <Settings className="h-5 w-5" />
@@ -121,27 +122,19 @@ export default function AppSidebar() {
           </DropdownMenuTrigger>
 
           <DropdownMenuContent
-            align="end"
-            className="w-72 bg-sidebar rounded-md border-none p-2"
+            align="right"
+            className="w-60 bg-gray-800 shadow-md rounded-md border-none p-2"
           >
-            {[
-              "Profile and account settings",
-              "Refine your interests",
-              "Support and help",
-              "Privacy policy",
-              "Terms of use",
-            ].map((label) => (
+            {settingsItems.map((index) => (
               <Link
-                key={label}
-                to="/feed"
+                key={index}
+                to={index.href}
                 className="
-            flex items-center px-4 py-2 rounded-md
-            text-sidebar-foreground
-            hover:bg-destructive hover:text-destructive-foreground
-            transition-colors
-          "
+                  flex items-center px-4 py-2 rounded-md 
+                  text-white hover:bg-[#374151] transition-colors
+                "
               >
-                {label}
+                {index.title}
               </Link>
             ))}
           </DropdownMenuContent>

@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeroOrbitCarousel from "./HeroOrbitCarousel";
 import { heroImages } from "../../utils/heroImages";
@@ -17,7 +16,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto h-full max-w-5xl items-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="mx-auto w-full max-w-3xl text-center pt-16 sm:pt-24 lg:pt-28">
-          <h1 className="font-clash text-balance text-5xl font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-5xl">
+          <h1 className="font-clash text-balance font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl">
             Discover.Explore.
             <br />
             Support.Connect.

@@ -14,7 +14,7 @@ export default function PublicRoute({ children }) {
   }
 
   if (isSignedIn) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/feed" replace />;
   }
 
   return children;

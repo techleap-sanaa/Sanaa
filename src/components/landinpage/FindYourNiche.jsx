@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 import photographyImg from "/FindYourNiche/photography.jpg";
 import musicImg from "/FindYourNiche/music.jpg";
